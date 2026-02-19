@@ -22,7 +22,7 @@ export const ProductCard = ({
 
   return (
     <div className={`bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition ${className}`}>
-      <div className="h-48 bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center">
+      <div className="h-48 bg-linear-to-br from-indigo-400 to-purple-500 flex items-center justify-center">
         {product.image ? (
           <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
         ) : (
