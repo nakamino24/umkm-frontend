@@ -1,7 +1,7 @@
 // src/components/pages/Dashboard/Dashboard.jsx
 import React, { useEffect, useState } from 'react';
 import { TrendingUp, ShoppingBag, Package, AlertTriangle } from 'lucide-react';
-import DashboardLayout from '../../../templates/DashboardLayout/DashboardLayout.jsx';
+import DashboardLayout from "../../../templates/DashboardLayout";
 import { StatCard } from '../../molecules';
 import { DataTable } from '../../organisms';
 import { Badge } from '../../atoms';

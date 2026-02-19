@@ -1,8 +1,7 @@
-// src/components/templates/DashboardLayout/DashboardLayout.jsx
 import React from 'react';
 import Sidebar from '../../organisms/Sidebar/Sidebar.jsx';
 
-export const DashboardLayout = ({ children }) => {
+const DashboardLayout = ({ children }) => {
   return (
     <div className="flex min-h-screen bg-gray-50">
       <Sidebar />
