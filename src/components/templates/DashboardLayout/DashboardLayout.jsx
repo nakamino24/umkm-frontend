@@ -1,6 +1,6 @@
 // src/components/templates/DashboardLayout/DashboardLayout.jsx
 import React from 'react';
-import { Sidebar } from '../../organisms';
+import Sidebar from '../../organisms/Sidebar/Sidebar.jsx';
 
 export const DashboardLayout = ({ children }) => {
   return (

@@ -2,11 +2,12 @@
 import React, { useEffect } from 'react';
 import { Plus } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { DashboardLayout } from '../../../templates';
-import { ProductCard } from '../../../molecules';
-import { SearchBar } from '../../../molecules';
+import DashboardLayout from "../../../templates/DashboardLayout/DashboardLayout.jsx";
+import ProductCard from "../../../molecules/ProductCard/ProductCard.jsx";
+import SearchBar from "../../../molecules/SearchBar/SearchBar.jsx";
 import { Button, Loading } from '../../../atoms';
-import { Modal, ConfirmModal } from '../../../organisms';
+import Modal from '../../../organisms/Modal/Modal.jsx';
+import ConfirmModal from '../../../organisms/ConfirmModal/ConfirmModal.jsx';
 import { usePaginatedApi, useModal, useConfirm, useToast } from '../../../../hooks';
 import { productService } from '../../../../services/api';
 
