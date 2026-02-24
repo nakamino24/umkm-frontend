@@ -1,10 +1,10 @@
 // src/components/pages/Dashboard/Dashboard.jsx
 import React, { useEffect, useState } from 'react';
 import { TrendingUp, ShoppingBag, Package, AlertTriangle } from 'lucide-react';
-import DashboardLayout from "../../../templates/DashboardLayout";
-import { StatCard } from '../../molecules';
-import { DataTable } from '../../organisms';
-import { Badge } from '../../atoms';
+import DashboardLayout from '../../templates/DashboardLayout';
+import StatCard from "../../molecules/StatCard/StatCard.jsx";
+import DataTable from "../../organisms/DataTable/DataTable.jsx";
+import Badge from "../../atoms/Badge/Badge.jsx";
 import { dashboardService } from '../../../services/api';
 import { useApi } from '../../../hooks';
 import { formatRupiah } from '../../../utils/formatters';

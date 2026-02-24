@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import useAuthStore from './store/slices/authSlice';
 
-// Import langsung ke file .jsx (bukan folder!)
+// Pages
+import Register from './components/pages/Register/Register.jsx';
 import Login from './components/pages/Login/Login.jsx';
 import Dashboard from './components/pages/Dashboard/Dashboard.jsx';
 import ProductList from './components/pages/Products/ProductList/ProductList.jsx';
@@ -40,6 +41,9 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/register" element={
+          <PublicRoute><Register /></PublicRoute>
+        } />
         <Route path="/login" element={
           <PublicRoute><Login /></PublicRoute>
         } />
