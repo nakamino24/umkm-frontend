@@ -42,10 +42,10 @@ export const useConfirm = () => {
   });
 
   const confirm = useCallback((options) => {
-    setConfig({
-      ...config,
+    setConfig((prev) => ({
+      ...prev,
       ...options
-    });
+    }));
     setIsOpen(true);
   }, []);
 

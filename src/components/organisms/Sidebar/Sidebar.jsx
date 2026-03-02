@@ -2,11 +2,7 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import useAuthStore from '../../../store/slices/authSlice';
-import { 
-  LayoutDashboard, Package, ShoppingCart, Users, 
-  BarChart3, Settings, LogOut, ChevronDown, ChevronRight,
-  Store, Menu, X
-} from 'lucide-react';
+import { LayoutDashboard, Package, LogOut, ChevronDown, ChevronRight, Store, Menu, X } from 'lucide-react';
 import { Button } from '../../atoms';
 
 const menuItems = [
@@ -16,18 +12,9 @@ const menuItems = [
     label: 'Produk',
     submenu: [
       { path: '/products', label: 'Daftar Produk' },
-      { path: '/products/create', label: 'Tambah Produk' }
-    ]
+      { path: '/products/create', label: 'Tambah Produk' },
+    ],
   },
-  {
-    icon: ShoppingCart,
-    label: 'Penjualan',
-    submenu: [
-      { path: '/orders', label: 'Pesanan' },
-      { path: '/customers', label: 'Pelanggan' }
-    ]
-  },
-  { path: '/settings', icon: Settings, label: 'Pengaturan' }
 ];
 
 export const Sidebar = () => {

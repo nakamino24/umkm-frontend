@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
+import { useForm, useWatch } from 'react-hook-form';
 import { User, Store, Mail, Phone, Lock, Briefcase } from 'lucide-react';
 import useAuthStore from '../../../store/slices/authSlice';
 import AuthLayout from '../../templates/AuthLayout/AuthLayout.jsx';
@@ -10,16 +10,16 @@ import Input from '../../atoms/Input/Input.jsx';
 const Register = () => {
   const navigate = useNavigate();
   const { register: registerUser, isLoading, error, clearError, isAuthenticated } = useAuthStore();
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { control, register, handleSubmit, formState: { errors } } = useForm();
 
-  const password = watch('password');
+  const password = useWatch({ control, name: 'password' });
 
   useEffect(() => {
     if (isAuthenticated) {
       navigate('/dashboard');
     }
     clearError();
-  }, [isAuthenticated, navigate]);
+  }, [clearError, isAuthenticated, navigate]);
 
   const onSubmit = async (data) => {
     const result = await registerUser(data);
