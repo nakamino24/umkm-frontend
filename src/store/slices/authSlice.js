@@ -2,7 +2,7 @@
 import { create } from 'zustand';
 import { authService } from '../../services/api';
 
-const useAuthStore = create((set, get) => ({
+const useAuthStore = create((set) => ({
   user: null,
   isAuthenticated: false,
   isLoading: false,
@@ -57,7 +57,7 @@ const useAuthStore = create((set, get) => ({
     try {
       const response = await authService.getUser();
       set({ user: response.data.data, isAuthenticated: true });
-    } catch (error) {
+    } catch {
       localStorage.removeItem('token');
       set({ isAuthenticated: false, user: null });
     }
